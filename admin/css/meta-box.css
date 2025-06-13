@@ -1,0 +1,272 @@
+/**
+ * AI Summary Meta Box Styles
+ *
+ * @package NeuzaAI\Summary
+ * @since 1.0.0
+ */
+
+/* Meta Box Container */
+#ai-summary-meta-box-content {
+    margin: 0;
+}
+
+/* Loading Animation */
+.spin {
+    animation: ai-summary-spin 1s linear infinite;
+}
+
+@keyframes ai-summary-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Header Section */
+.ai-summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.ai-summary-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.ai-summary-last-generated {
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Form Fields */
+.ai-summary-fields {
+    margin-bottom: 20px;
+}
+
+.field-group {
+    margin-bottom: 25px;
+}
+
+.field-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.field-group textarea,
+.field-group input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.field-group textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* Key Points */
+.key-point-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.key-point-item input {
+    flex: 1;
+}
+
+.key-point-item .remove-point {
+    flex-shrink: 0;
+    min-width: auto;
+    padding: 5px 8px;
+    background: #dc3232;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.key-point-item .remove-point:hover {
+    background: #a00;
+}
+
+.key-point-item .remove-point .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/* FAQ Items */
+.faq-item {
+    background: #f9f9f9;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.faq-question,
+.faq-answer {
+    margin-bottom: 10px;
+}
+
+.faq-question label,
+.faq-answer label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.faq-actions {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.faq-actions .remove-faq {
+    background: #dc3232;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.faq-actions .remove-faq:hover {
+    background: #a00;
+}
+
+.faq-actions .remove-faq .dashicons {
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+}
+
+/* Add Buttons */
+#add-key-point,
+#add-faq {
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#add-key-point .dashicons,
+#add-faq .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/* Regenerate Button */
+#regenerate-summary {
+    background: #0073aa;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+}
+
+#regenerate-summary:hover {
+    background: #005a87;
+}
+
+#regenerate-summary:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+#regenerate-summary .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+#regenerate-summary .dashicons-update-alt {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Status Messages */
+#ai-summary-status {
+    margin-top: 15px;
+}
+
+#ai-summary-status .notice {
+    margin: 0;
+    padding: 10px 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ai-summary-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .key-point-item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .key-point-item .remove-point {
+        align-self: flex-end;
+        margin-top: 5px;
+    }
+}
+
+/* WordPress Admin Compatibility */
+.postbox #ai-summary-meta-box-content {
+    padding: 0;
+}
+
+.postbox .ai-summary-fields {
+    padding: 0 12px;
+}
+
+/* Focus States */
+.field-group input:focus,
+.field-group textarea:focus {
+    border-color: #0073aa;
+    box-shadow: 0 0 0 1px #0073aa;
+}
+
+/* Error States */
+.field-group.error input,
+.field-group.error textarea {
+    border-color: #dc3232;
+}
+
+.field-group.error label {
+    color: #dc3232;
+}
+
+/* Loading States */
+.ai-summary-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.ai-summary-loading * {
+    cursor: wait !important;
+}

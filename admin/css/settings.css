@@ -1,0 +1,219 @@
+/**
+ * AI Summary Settings Styles
+ *
+ * @package NeuzaAI\Summary
+ * @since 1.0.0
+ */
+
+/* Settings Page */
+.ai-summary-settings {
+    max-width: 800px;
+}
+
+/* API Key Field */
+#ai_summary_api_key {
+    width: 300px;
+}
+
+#toggle-api-key {
+    margin-left: 10px;
+    min-width: 60px;
+}
+
+/* Provider and Model Fields */
+#ai_summary_provider,
+#ai_summary_model {
+    width: 200px;
+}
+
+/* Temperature Field */
+#ai_summary_temperature {
+    width: 80px;
+}
+
+/* Checkbox Fields */
+.checkbox-field {
+    margin: 10px 0;
+}
+
+.checkbox-field label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Tools Section */
+.tools-section {
+    background: #f9f9f9;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.tools-section h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.tools-section p {
+    margin-bottom: 15px;
+}
+
+.tools-section button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* Status Messages */
+#ai-summary-status {
+    margin-top: 20px;
+    max-width: 600px;
+}
+
+#ai-summary-status .notice {
+    margin: 0;
+    padding: 10px 15px;
+}
+
+/* Form Table Overrides */
+.form-table th {
+    width: 200px;
+    vertical-align: top;
+    padding-top: 15px;
+}
+
+.form-table td {
+    vertical-align: top;
+    padding-top: 10px;
+}
+
+.form-table .description {
+    margin-top: 5px;
+    font-style: italic;
+    color: #666;
+    max-width: 500px;
+}
+
+/* Button Styles */
+.button-tools {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 10px;
+}
+
+.button-tools .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/* Loading States */
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* API Configuration Section */
+.api-config-section {
+    background: white;
+    border: 1px solid #c3c4c7;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.api-config-section h3 {
+    margin-top: 0;
+    color: #23282d;
+}
+
+/* Behavior Settings Section */
+.behavior-section {
+    background: #f6f7f7;
+    border: 1px solid #c3c4c7;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.behavior-section h3 {
+    margin-top: 0;
+    color: #23282d;
+}
+
+/* Provider-specific styling */
+.provider-openrouter {
+    background-color: #e8f4fd;
+}
+
+.provider-gemini {
+    background-color: #f0f8e8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-table th,
+    .form-table td {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    .form-table th {
+        border-bottom: none;
+        padding-bottom: 5px;
+    }
+    
+    #ai_summary_api_key,
+    #ai_summary_provider,
+    #ai_summary_model {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    #toggle-api-key {
+        margin-left: 0;
+        margin-top: 10px;
+        display: block;
+    }
+}
+
+/* WordPress Admin Color Scheme Compatibility */
+.admin-color-fresh .button-primary {
+    background: #0073aa;
+    border-color: #0073aa;
+}
+
+.admin-color-light .button-primary {
+    background: #04a4cc;
+    border-color: #04a4cc;
+}
+
+.admin-color-blue .button-primary {
+    background: #096484;
+    border-color: #096484;
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .form-table th,
+    .form-table td {
+        border-color: #000;
+    }
+    
+    .description {
+        color: #000;
+    }
+}
+
+/* Animation for status updates */
+.status-fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

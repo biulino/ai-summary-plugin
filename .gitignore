@@ -1,0 +1,96 @@
+# WordPress
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/backup-db/
+
+# Logs
+*.log
+error_log
+debug.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Dependencies
+node_modules/
+vendor/
+composer.lock
+package-lock.json
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.test
+
+# Build files
+dist/
+build/
+*.min.js
+*.min.css
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Plugin specific
+ai-summary-logs/
+
+# Development and testing files - DO NOT UPLOAD
+*-test.php
+*-debug*.php
+test-*.php
+*-verification.php
+activation-test.php
+button-fix-verification.php
+button-functionality-test.php
+class-debug.php
+complete-functionality-test.php
+debug-ajax.php
+final-status-report.php
+final-verification.php
+generate-test.php
+health-debug-simple.php
+live-button-test.php
+minimal-test.php
+plugin-status-check.php
+test-ajax-direct.php
+test-ajax.php
+test-runner.php
+wp-health-test.php
+wp-status-check.php
+quick-test.sh
+
+# Development deployment files
+deploy.php
+production-deploy.php
+
+# Development documentation - keep only main README
+BUTTON-FIX-*.md
+COMPLETE-FIX-GUIDE.md
+DEPLOYMENT*.md
+FINAL-*.md
+IMPROVEMENTS.md
+LIVE-TESTING-GUIDE.md
+PRODUCTION-READY.md
+READY-FOR-TESTING.md
+TASK-COMPLETED-SUCCESSFULLY.md
+TESTING-GUIDE.md
+
+# Test directories (keep the structure but exclude test files)
+tests/*.php
